@@ -8,12 +8,14 @@
 #  Question 2
 ################################################################################
 #
-# Instructions:
-# Write a function that will swap a tuple of two items. For example, the function 
-# should change (x, y) into (y, x). 
-# Assign the function to `swapper` so that the function `run_swapper(..)` can use
-# it. As always, there is a test suite that checks the result. It is in 
-# `question2_test.py.`
+# Instrucciones:
+# Escriba una función que intercambie una tupla de dos elementos.Por ejemplo, la función
+# debería cambiar (x, y) en (y, x).
+# Asigna la función a `swapper` para que la función` run_swapper (..) `pueda usar
+# él.Como siempre, hay un conjunto de pruebas que verifica el resultado.Está dentro
+# `pregunta2_test.py.`
+
+
 
 swapper = None
 
