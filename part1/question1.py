@@ -8,10 +8,10 @@
 #  Question 1
 ################################################################################
 #
-# Instructions:
-# The two functions below are used to tell the weather. They have some bugs that
-# need to be fixed. The test suite in `question1_test.py` will verify the output.
-# Read the test suite to know the values that these functions should return.
+# Instrucciones:
+# Las dos funciones a continuación se utilizan para decir el clima.Tienen algunos errores que
+# Necesita ser reparado.El conjunto de pruebas en `Question1_test.py` verificará la salida.
+# Lea el conjunto de pruebas para conocer los valores que estas funciones deberían devolver.
 
 def get_city_temperature(city):
    if city == "Quito":
@@ -20,6 +20,8 @@ def get_city_temperature(city):
       return 17
    if city == "San Francisco":
       return 16
+   if city == "New York":
+      return 14
 
 def get_city_weather(city):
 
@@ -29,7 +31,8 @@ def get_city_weather(city):
      sky_condition = "cloudy"
   elif city == "New York":
      sky_condition = "rainy"
-
+  elif city == "Quito":
+     sky_condition = "sunny"
   temperature = get_city_temperature(city)
 
   return str(temperature) + " degrees and " + sky_condition
