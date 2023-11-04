@@ -15,9 +15,14 @@
 # él.Como siempre, hay un conjunto de pruebas que verifica el resultado.Está dentro
 # `pregunta2_test.py.`
 
+def swapperfun(tupla):
+    if len(tupla) == 2:
+        x, y = tupla
+        return (y, x)
+    else:
+        return None
 
-
-swapper = None
+swapper = swapperfun
 
 def run_swapper(list_of_tuples):
   return list(map(swapper, list_of_tuples))
