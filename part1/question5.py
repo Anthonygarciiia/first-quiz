@@ -8,38 +8,42 @@
 #  Question 5
 ################################################################################
 #
-# Instructions:
-# This questions continues to use the database we worked with in Question 4. In 
-# this question, we will made some modifications ot the table.
+# Instrucciones:
+# Estas preguntas continúan utilizando la base de datos con la que trabajamos en la pregunta 4. En
+# Esta pregunta, haremos algunas modificaciones de la tabla.
 
-# Part 5.A:
-# Create a new table, 'favorite_foods.' It should have the columns:
+# Parte 5.A:
+# Crea una nueva tabla,'favorite_foods.' Debe tener las columnas:
 # food_id integer
 # name text
 # vegetarian integer
 
 sql_create_favorite_foods = """
-
-Your SQL here.
-
+CREATE TABLE favorite_foods (
+          food_id integer,
+          name text not null,
+          vegetarian integer
+        );
 """
 
 # Part 5.B:
-# Alter the animals and people tables by adding a new column to each called 'favorite_food_id'
-# The test suite will verify the new changes by inserting some new rows. 
+# Altere las tablas de animales y personas agregando una nueva columna a cada una llamada 'favoritas_food_id'
+# El conjunto de pruebas verificará los nuevos cambios insertando algunas filas nuevas.
 
 sql_alter_tables_with_favorite_food = """
-
-Your SQL here.
-
+ALTER TABLE animals
+        ADD COLUMN favorite_food_id integer;
+ALTER TABLE people
+        ADD COLUMN favorite_food_id integer;
 """
 
 # Part 5.C:
-# Write a query to select all pets that are vegetarian.
-# THe output should be a list of tuples in the format: (<pet name>, <food name>)
+# Escriba una consulta para seleccionar todas las mascotas que sean vegetarianas.
+# La salida debe ser una lista de tuplas en el formato: (<nombre de mascota>, <Nombre de la comida>)
 
 sql_select_all_vegetarian_pets = """
-
-Your SQL here.
-
+SELECT a.name AS pet_name, ff.name AS food_name
+        FROM animals a
+        JOIN favorite_foods ff ON a.favorite_food_id = ff.food_id
+        WHERE ff.vegetarian = 1;
 """

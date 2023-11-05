@@ -45,8 +45,8 @@ PEOPLE_ANIMALS = [
 ]
 
 ###
-# Utility functions for interacting with the database.
-# No need to look any further!
+# Funciones de utilidad para interactuar con la base de datos.
+# ¡No hay necesidad de buscar más!
 ###
 
 DB_NAME = "quiz_pets"
@@ -67,3 +67,4 @@ def create_db():
     con.executemany("INSERT INTO animals VALUES(?, ?, ?, ?)", ANIMALS)
     con.executemany("INSERT INTO people VALUES(?, ?, ?, ?)", PEOPLE)
     con.executemany("INSERT INTO people_animals VALUES(?, ?)", PEOPLE_ANIMALS)
+    
